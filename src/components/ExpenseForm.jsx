@@ -28,42 +28,49 @@ function ExpenseForm({ onAddExpense }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-3">
-  <div className="mb-2">
-    <input
+    <div className="col-6">
+    <form onSubmit={handleSubmit}>
+        <h3><b>Add Expense</b></h3>
+  <div className="mb-3">
+  <input
       className="form-control"
+      id="description"
       placeholder="Description"
       value={description}
       onChange={e => setDescription(e.target.value)}
     />
   </div>
-  <div className="mb-2">
+  <div className="mb-3">
     <input
       className="form-control"
+      id="Category"
       placeholder="Category"
       value={category}
       onChange={e => setCategory(e.target.value)}
     />
   </div>
-  <div className="mb-2">
+  <div className="mb-3">
     <input
       type="number"
+      id="Amount"
       className="form-control"
       placeholder="Amount (Ksh)"
       value={amount}
       onChange={e => setAmount(e.target.value)}
     />
   </div>
-  <div className="mb-2">
+  <div className="mb-3">
     <input
       type="date"
+      id="Date"
       className="form-control"
       value={date}
       onChange={e => setDate(e.target.value)}
     />
   </div>
-  <button type="submit" className="btn btn-primary">Add Expense</button>
+  <button type="submit" className="btn btn-dark btn-sm">Add Expense</button>
 </form>
+</div>
   );
 }
 
