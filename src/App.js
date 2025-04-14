@@ -24,11 +24,15 @@ function App() {
   );
 
   return (
-    <div className="App">
+    <div className='container'>
+    <div className='d-flex flex-row'>
       <h1>Expense Tracker</h1>
       <ExpenseForm onAddExpense={handleAddExpense} />
+      </div>
+      <div className='d-flex flex-row'>
       <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
       <ExpenseTable expenses={filteredExpenses} onDelete={handleDeleteExpense} />
+      </div>
     </div>
   );
 }

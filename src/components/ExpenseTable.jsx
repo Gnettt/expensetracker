@@ -3,6 +3,7 @@ function ExpenseTable({ expenses, onDelete }) {
       <table className="table table-striped table-bordered mt-4">
         <thead className="table-dark">
           <tr>
+            <th>id</th>
             <th>Expense</th>
             <th>Description</th>
             <th>Category</th>
@@ -13,15 +14,17 @@ function ExpenseTable({ expenses, onDelete }) {
         </thead>
         <tbody>
         {expenses.map((expense) => (
-          <tr key={expense.id}>
+          <tr>
+            <td>{expense.id}</td>
+            <td>{expense.expenses}</td>
             <td>{expense.description}</td>
             <td>{expense.category}</td>
             <td>{expense.amount.toFixed(2)}</td>
             <td>{expense.date}</td>
             <td>
                 <button onClick={() => onDelete(expense.id)}>Delete</button>
-              </td>
-            </tr>
+            </td>
+          </tr>
           ))}
         </tbody>
       </table>

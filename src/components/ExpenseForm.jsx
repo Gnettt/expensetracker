@@ -13,6 +13,7 @@ function ExpenseForm({ onAddExpense }) {
 
     const newExpense = {
       id: crypto.randomUUID(),
+      expense,
       description,
       category,
       amount: parseFloat(amount),
@@ -31,6 +32,15 @@ function ExpenseForm({ onAddExpense }) {
     <div className="col-6">
     <form onSubmit={handleSubmit}>
         <h3><b>Add Expense</b></h3>
+        <div className="mb-3">
+  <input
+      className="form-control"
+      id="expense"
+      placeholder="Expense"
+      value={expenses}
+      onChange={e => setExpense(e.target.value)}
+    />
+  </div>
   <div className="mb-3">
   <input
       className="form-control"
@@ -64,11 +74,14 @@ function ExpenseForm({ onAddExpense }) {
       type="date"
       id="Date"
       className="form-control"
+      placeholder="Date"
       value={date}
       onChange={e => setDate(e.target.value)}
     />
   </div>
+  <div className="mb-3">
   <button type="submit" className="btn btn-dark btn-sm">Add Expense</button>
+  </div>
 </form>
 </div>
   );

@@ -5,6 +5,7 @@ export default function ExpenseRow({ expense, onDelete }) {
   
     return (
       <tr>
+        <td>{expense.id}</td>
         <td>{expense.expense}</td>
         <td>{expense.description}</td>
         <td>{expense.category}</td>
