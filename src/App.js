@@ -25,11 +25,12 @@ function App() {
 
   return (
     <div className='container'>
-    <div className='d-flex flex-row'>
+     <div className='d-flex flex-row'>
       <h1>Expense Tracker</h1>
       <ExpenseForm onAddExpense={handleAddExpense} />
       </div>
       <div className='d-flex flex-row'>
+      <h2>Expense List</h2>
       <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
       <ExpenseTable expenses={filteredExpenses} onDelete={handleDeleteExpense} />
       </div>

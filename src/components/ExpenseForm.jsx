@@ -37,7 +37,7 @@ function ExpenseForm({ onAddExpense }) {
       className="form-control"
       id="expense"
       placeholder="Expense"
-      value={expenses}
+      value={expense}
       onChange={e => setExpense(e.target.value)}
     />
   </div>
