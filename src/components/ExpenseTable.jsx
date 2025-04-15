@@ -16,7 +16,7 @@ function ExpenseTable({ expenses, onDelete }) {
         {expenses.map((expense) => (
           <tr>
             <td>{expense.id}</td>
-            <td>{expense.expenses}</td>
+            <td>{expense.expense}</td>
             <td>{expense.description}</td>
             <td>{expense.category}</td>
             <td>{expense.amount.toFixed(2)}</td>
